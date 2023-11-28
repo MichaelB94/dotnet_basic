@@ -129,27 +129,73 @@ else
     Console.WriteLine($"{sentence} is not a palindrome.");
 }
 
-
 Console.WriteLine("Press any key to close the program");
 Console.ReadKey();
 
 //ES 9
 
 Console.WriteLine("Welcome to Celsius2Fahrenheit");
-Console.Write("Enter temperature in Celsius: ");
 
-static double ConvertCelsiusToFahrenheit(double celsius)
+
+static void ConvertCelsiusToFahrenheit()
 {
-    return celsius * 1.8 + 32;
+    Console.Write("Enter temperature in Celsius: ");
+    if (double.TryParse(Console.ReadLine(), out double celsius))
+    {
+        double fahrenheit = celsius * 1.8 + 32;
+        Console.WriteLine($"{celsius}°C in Fahrenheit: {fahrenheit}°F");
+    }
+    else
+    {
+        Console.WriteLine("Invalid input. Please enter a valid numeric value for temperature.");
+    }
 }
-if (double.TryParse(Console.ReadLine(), out double celsius))
+ConvertCelsiusToFahrenheit();
+Console.WriteLine("Press any key to close the program");
+Console.ReadKey();
+
+//ES 9
+
+Console.WriteLine("Temperature Converter");
+
+Console.WriteLine("Choose conversion:");
+Console.WriteLine("1. Celsius to Fahrenheit");
+Console.WriteLine("2. Fahrenheit to Celsius");
+
+static void ConvertFahrenheitToCelsius()
 {
-    double fahrenheit = ConvertCelsiusToFahrenheit(celsius);
-    Console.WriteLine($"{celsius}°C in Fahrenheit: {fahrenheit}°F");
+    Console.Write("Enter temperature in Fahrenheit: ");
+    if (double.TryParse(Console.ReadLine(), out double fahrenheit))
+    {
+        double celsius = (fahrenheit - 32) * 0.5556;
+        Console.WriteLine($"{fahrenheit}°F in Celsius: {celsius}°C");
+    }
+    else
+    {
+        Console.WriteLine("Invalid input. Please enter a valid numeric value for temperature.");
+    }
 }
+
+if (int.TryParse(Console.ReadLine(), out int choice))
+{
+    switch (choice)
+    {
+        case 1:
+            ConvertCelsiusToFahrenheit();
+            break;
+
+        case 2:
+            ConvertFahrenheitToCelsius();
+            break;
+
+        default:
+            Console.WriteLine("Invalid choice. Please enter 1 or 2.");
+            break;
+        }
+    }
 else
 {
-    Console.WriteLine("Invalid input. Please enter a valid numeric value for temperature.");
+    Console.WriteLine("Invalid input. Please enter a valid numeric choice.");
 }
 
 Console.WriteLine("Press any key to close the program");

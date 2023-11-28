@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using Exercises;
 
+//ES. 1
 Console.WriteLine("What's your name?");
 
 string? name = Console.ReadLine();
@@ -17,6 +18,8 @@ else
     Console.WriteLine("Hello, " + name);
 }
 
+
+//Es. 2
 Console.WriteLine("Welcome to AddCalculator.");
 Console.Write("Enter the first number: ");
 String firstInput = Console.ReadLine();
@@ -39,15 +42,15 @@ if (!double.TryParse(secondInput, out double secondNumber))
 
 double sum = firstNumber + secondNumber;
 Console.WriteLine($"The sum of {firstNumber} and {secondNumber} is: {sum}");
-
+//Es. 3
 Console.WriteLine("Welcome to Reverso.");
 Console.WriteLine("Please write some text, i'll reverse it for you!");
 
 static string ReverseString(string textInput)
 {
-    char[] charArray = textInput.ToCharArray();
-    Array.Reverse(charArray);
-    return new string(charArray);
+    char[] output = textInput.ToCharArray();
+    Array.Reverse(output);
+    return new string(output);
 }
 
 string? reversedText = ReverseString(Console.ReadLine());
@@ -55,7 +58,7 @@ Console.WriteLine($"txet desrever : {reversedText}");
 
 Console.WriteLine("press any button to close the program");
 Console.ReadKey();
-
+// Es 5
 Console.WriteLine("Welcome to FileReader");
 Console.WriteLine("Enter the file path:");
 string filePath = Console.ReadLine();
@@ -84,6 +87,7 @@ static string ReadFile(string path)
 Console.WriteLine("Press any key to close the program");
 Console.ReadKey();
 
+//ES 6
 Console.WriteLine("Welcome to AnimalSound");
 
 Dog myDog = new Dog("Loki", 3);
@@ -98,4 +102,33 @@ myHorse.Speak();
 Console.WriteLine("Press any key to close the program");
 Console.ReadKey();
 
+//ES 8
+Console.WriteLine("Welcome to PalindromeCheck");
+Console.WriteLine("Enter the sentence you want to check:");
+string? sentence = Console.ReadLine();
 
+static bool IsPalindrome(string? text) 
+{
+    if(text == null) 
+    {
+        return false;
+    }
+    string input = text.Replace(" ", "").ToLower();
+    string reversedText = ReverseString(input);
+    return input == reversedText;
+}
+
+bool isPalindrome = IsPalindrome(sentence);
+
+if (isPalindrome)
+{
+    Console.WriteLine($"{sentence} is a palindrome.");
+}
+else
+{
+    Console.WriteLine($"{sentence} is not a palindrome.");
+}
+
+
+Console.WriteLine("Press any key to close the program");
+Console.ReadKey();

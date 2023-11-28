@@ -132,3 +132,28 @@ else
 
 Console.WriteLine("Press any key to close the program");
 Console.ReadKey();
+
+//ES 9
+
+Console.WriteLine("Welcome to Celsius2Fahrenheit");
+Console.Write("Enter temperature in Celsius: ");
+
+static double ConvertCelsiusToFahrenheit(double celsius)
+{
+    return celsius * 1.8 + 32;
+}
+if (double.TryParse(Console.ReadLine(), out double celsius))
+{
+    double fahrenheit = ConvertCelsiusToFahrenheit(celsius);
+    Console.WriteLine($"{celsius}°C in Fahrenheit: {fahrenheit}°F");
+}
+else
+{
+    Console.WriteLine("Invalid input. Please enter a valid numeric value for temperature.");
+}
+
+Console.WriteLine("Press any key to close the program");
+Console.ReadKey();
+
+
+

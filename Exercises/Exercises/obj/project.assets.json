@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\silen\\Desktop\\Develhope\\.NET\\Exercises\\Exercises\\Exercises.csproj",
+      "projectUniqueName": "C:\\Users\\silen\\Source\\Repos\\dotnet_basic\\Exercises\\Exercises\\Exercises.csproj",
       "projectName": "Exercises",
-      "projectPath": "C:\\Users\\silen\\Desktop\\Develhope\\.NET\\Exercises\\Exercises\\Exercises.csproj",
+      "projectPath": "C:\\Users\\silen\\Source\\Repos\\dotnet_basic\\Exercises\\Exercises\\Exercises.csproj",
       "packagesPath": "C:\\Users\\silen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\silen\\Desktop\\Develhope\\.NET\\Exercises\\Exercises\\obj\\",
+      "outputPath": "C:\\Users\\silen\\Source\\Repos\\dotnet_basic\\Exercises\\Exercises\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\silen\\AppData\\Roaming\\NuGet\\NuGet.Config",
